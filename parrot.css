@@ -1,0 +1,413 @@
+body{
+    background:lightblue;
+}
+
+/* CLOUDS STYLING */
+.cloud_1{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    transform: scale(0.6);
+    animation: MovingCloud_1 35s linear infinite;
+}
+.cloud_rectangle{
+    background: white;
+    width: 350px;
+    height: 150px;
+    border-radius: 100px;
+}
+.cloud_left{
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 60px;
+}
+.cloud_right{
+    background: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 140px;
+}
+.cloud_2{
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    transform: scale(0.4);
+    animation: MovingCloud_2 35s linear infinite;
+}
+.cloud_3{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    transform: scale(0.7);
+    animation: MovingCloud_3 35s linear infinite;
+}
+.cloud_4{
+    position: absolute;
+    top: 100px;
+    left: 850px;
+    transform: scale(0.6);
+    animation: MovingCloud_1 35s linear infinite;
+}
+.cloud_5{
+    position: absolute;
+    top: 300px;
+    left: 1200px;
+    transform: scale(0.4);
+    animation: MovingCloud_2 35s linear infinite;
+}
+
+/* Cloud animation */
+@keyframes MovingCloud_1{
+    0%{
+      transform: scale(0.6);
+      margin-left: -1000px;
+    }
+    
+    100%{
+      transform: scale(0.6);
+      margin-left: 100%;
+    }
+  }
+
+  @keyframes MovingCloud_2{
+    0%{
+      transform: scale(0.4);
+      margin-left: -1000px;
+    }
+    
+    100%{
+      transform: scale(0.4);
+      margin-left: 100%;
+    }
+  }
+  @keyframes MovingCloud_3{
+    0%{
+      transform: scale(0.7);
+      margin-left: -1000px;
+    }
+    
+    100%{
+      transform: scale(0.7);
+      margin-left: 100%;
+    }
+  }
+
+
+
+
+
+/* BIRD STYLING */
+.container{
+    margin:200px;
+    position: absolute;
+    z-index: 5;
+}
+/* Body */
+.body{
+    margin: 0 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(5deg);
+}
+.body_first{
+    border-bottom: 190px solid hsl(96, 65%, 65%);
+    border-left: 90px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 50px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    transform: rotate(-130deg) skewY(-20deg);
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.body_second{
+   border-bottom: 72px solid hsl(96, 65%, 65%);
+    border-left: 72px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 50px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    transform: rotate(-110deg) skewY(-20deg);
+    position: absolute;
+    top: 209px;
+    left: 58px;
+}
+.body_third{
+   border-bottom: 160px solid hsl(96, 65%, 65%);
+    border-left: 70px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 50px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    transform: rotate(-185deg) skewY(20deg);
+    position: absolute;
+    top: 140px;
+    left: 78px;
+}
+.body_fourth{
+   width: 160px;
+    height: 100px;
+    background: hsl(96, 65%, 65%);
+    position: absolute;
+    top: 73px;
+    left: 70px;
+    transform: rotate(29deg);
+    border-radius: 43% 57% 83% 17% / 63% 20% 80% 37%;
+}
+/* Beak */
+.beak{
+  position: absolute;
+  top: 130px;
+  left: -59px;
+}
+.beak_upper{
+    transform: rotate(-28deg) scale(0.25);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
+}
+.triangle-up{
+    width: 0;
+    height: 0;
+    border-left: 260px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 35px solid orangered;
+    border-radius: 120% 0% 0% 0%;
+    position: relative;
+    animation: MoveUpDown 1s ease-out infinite alternate;
+    transform-origin: bottom right;
+}
+.triangle-up2 {
+    padding:0;
+    width: 260px;
+    height: 35px;
+    background-color: orangered;
+    transform: rotate(0deg);
+    border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
+    position: absolute;
+    top: 0px;
+    left: -260px;
+}  
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 225px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 60px solid orangered;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+}
+
+/* beak animation */
+@keyframes MoveUpDown {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(3deg);
+      }
+    }
+
+
+/* EYE */
+.eye{
+    transform: scale(0.25);
+    position: absolute;
+    top: 110px;
+    left: 140px;
+}
+.outer{
+    height: 80px;
+    width: 80px;
+    background: brown;
+    border-radius: 50%;
+    position: absolute;
+}
+.inner{
+    height: 40px;
+    width: 40px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 16%;
+    top: 25%;
+}
+
+
+/* Wing */
+.wing{
+    position: absolute;
+    top: 110px;
+    left: 245px;
+    transform: scale(1.3);
+    transform-origin: middle left;
+    animation: Fly2 1s infinite alternate;
+}
+.wing_big{
+    width: 215px;
+    height: 115px;
+    background-color: green;
+    border-radius: 33% 67% 57% 43% / 50% 0% 100% 50%; 
+    position: absolute;
+}
+.wing_elipse{
+    width: 50px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    transform: rotate(-5deg);    
+    position: absolute;
+    top: 89px;
+    left: 92px;
+}
+.wing_elipse--second{
+    width: 45px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    transform: rotate(-10deg);    
+    position: absolute;
+    top: 82px;
+    left: 130px;
+}
+.wing_elipse--third{
+    width: 45px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    transform: rotate(-30deg);    
+    position: absolute;
+    top: 68px;
+    left: 170px;
+
+}
+.wing_elipse--fourth{
+    transform: rotate(16deg);
+    width: 60px;
+    height: 30px;
+    background-color: green;
+    border-radius: 0% 100% 58% 42% / 99% 0% 100% 1%;   
+    position: absolute;
+    top: 55px;
+    left: 185px; 
+}
+.wing_elipse--fifth{
+    transform: rotate(11deg) scale(1.1);
+    width: 70px;
+    height: 30px;
+    background-color: green;
+    border-radius: 0% 100% 58% 42% / 99% 0% 100% 1%;    
+    position: absolute;
+    top: 29px;
+    left: 198px; 
+}
+.wing_elipse--sixth{
+    transform: rotate(-1deg) scale(1.2);
+    width: 75px;
+    height: 30px;
+    background-color: green;
+    border-radius: 0% 100% 58% 42% / 99% 0% 100% 1%;    
+    position: absolute;
+    top: 2px;
+    left: 207px; 
+}
+
+/* Second wing */
+.secondwing{
+    position: absolute;
+    top: 140px;
+    left: 200px;
+    transform: scale(1.2) rotate(-35deg);
+    z-index: -1;
+    transform-origin: top left;
+    animation: Fly 1s infinite alternate;
+}
+
+/* Wings animation */
+@keyframes Fly {
+  0%{
+    transform: scale(1.2) rotate(-50deg);
+  }
+  50%{
+    
+  }
+  100%{
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
+@keyframes Fly2 {
+  0%{
+    transform: scale(1.3) rotate(-5deg);
+  }
+  50%{
+    
+  }
+  100%{
+    transform: scale(1.3) rotate(38deg);
+  }
+}
+
+/* Tail */
+.tail{
+    position: absolute;
+    top: 88px;
+    left: 430px;
+    transform: scale(1.3) rotate(50deg);
+    z-index:-1;
+}
+.tail_feather{
+    position: absolute;
+    top: 100px;
+    left:100px;
+    background-color: rgb(10, 216, 20);
+    width: 140px;
+    height: 18px;
+    border-radius: 0% 100% 23% 77% / 60% 0% 100% 40%;
+
+}
+.tail_feather--green{
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    z-index: -1;
+    transform: rotate(-8deg);
+    background-color: rgb(11, 150, 11);
+    width: 148px;
+    height: 18px;
+    border-radius: 0% 100% 23% 77% / 60% 0% 100% 40%;
+}
+.tail_feather--darkgreen{
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    z-index: -2;
+    transform: rotate(-13deg);
+    background-color: rgb(3, 80, 3);
+    width: 152px;
+    height: 18px;
+    border-radius: 0% 100% 23% 77% / 60% 0% 100% 40%;
+}
+.tail_feather--darkergreen{
+    position: absolute;
+    top: -37px;
+    left: 0px;
+    z-index: -3;
+    transform: rotate(-18deg);
+    background-color: #032703;
+    width: 150px;
+    height: 18px;
+    border-radius: 0% 100% 23% 77% / 60% 0% 100% 40%;
+}
